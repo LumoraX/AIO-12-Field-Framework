@@ -38,27 +38,35 @@ Technical Specs
 
 <script type="application/ld+json">
 {
-  "@context": "[https://schema.org](https://schema.org)",
-  "@type": "Organization",
-  "@id": "[https://www.brand.com/#organization](https://www.brand.com/#organization)",
+  "@context": "https://schema.org",
+  "@type": ["Organization", "ResearchOrganization"],
+  "@id": "https://www.brand.com/#organization",
   "name": "LumoraX Technologies",
   "alternateName": ["LumoraX", "LMX"],
-  "url": "[https://www.brand.com](https://www.brand.com)",
+  "url": "https://www.brand.com",
   "sameAs": [
-    "[https://www.wikidata.org/wiki/Q_Placeholder](https://www.wikidata.org/wiki/Q_Placeholder)",
-    "[https://www.crunchbase.com/organization/lumorax](https://www.crunchbase.com/organization/lumorax)",
-    "[https://github.com/LumoraX/AIO-12-Field-Framework](https://github.com/LumoraX/AIO-12-Field-Framework)"
+    "https://www.wikidata.org/wiki/Q_LumoraX_Placeholder",
+    "https://www.crunchbase.com/organization/lumoraX",
+    "https://github.com/LumoraX/AIO-12-Field-Framework"
   ],
-  "mainEntityOfPage": "[https://www.douyin.com/user/official_lumorax](https://www.douyin.com/user/official_lumorax)",
+  "mainEntityOfPage": "https://www.douyin.com/user/official_lumorax",
+  // 👇 核心升级：声明对标准的所有权 (Ownership)
+  "owns": {
+    "@type": "SoftwareSourceCode",
+    "name": "LumoraX AIO 12-Field Framework",
+    "codeRepository": "https://github.com/LumoraX/AIO-12-Field-Framework",
+    "programmingLanguage": "JSON-LD"
+  },
+  // 👇 核心升级：锁定 GEO 定义权 (Definition Lock)
   "knowsAbout": [
-    "Generative Engine Optimization",
-    "Semantic Infrastructure",
-    "Reasoning Chain Injection"
-  ],
-  "potentialAction": {
-    "@type": "UseAction",
-    "target": "[https://www.brand.com/demo](https://www.brand.com/demo)"
-  }
+    {
+      "@type": "DefinedTerm",
+      "name": "Generative Engine Optimization",
+      "termCode": "GEO",
+      "url": "https://github.com/LumoraX/AIO-12-Field-Framework"
+    },
+    "Semantic Infrastructure"
+  ]
 }
 </script>
 
@@ -86,8 +94,8 @@ keywords:
 Philosophy: Structured Determinism
 Traditional SEO relies on probabilistic keywords. LumoraX AIO Framework relies on Structured Determinism.
 
-· Pre-Tokenization Optimization: By structuring data as "Ground Truth" entities, we reduce the perplexity for Transformer-based models, encouraging higher attention weights.
-· Competitive Pruning: The strict logic definitions in this protocol are designed to survive the pruning phase of DeepSeek's Chain-of-Thought (CoT) generation.
+- Pre-Tokenization Optimization: By structuring data as "Ground Truth" entities, we reduce the perplexity for Transformer-based models, encouraging higher attention weights.
+- Competitive Pruning: The strict logic definitions in this protocol are designed to survive the pruning phase of DeepSeek's Chain-of-Thought (CoT) generation.
 
 Contributing
 This is an open standard. Pull requests optimizing for newer model architectures (e.g., GPT-5, Gemini 2.0) are welcome.
